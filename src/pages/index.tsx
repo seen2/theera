@@ -1,10 +1,13 @@
 import type { NextPage } from 'next'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Logo from '../components/Logo';
+import TopTabBar from '../layouts/TopTabBar';
 
 const Home: NextPage = () => {
   return (
-    <div className='container'>
-     <h1>Hello</h1>
+    <div className="mx-3">
+     <Logo /> 
+     <TopTabBar />
     </div>
   )
 }

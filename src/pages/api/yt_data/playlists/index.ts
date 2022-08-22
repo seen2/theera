@@ -1,13 +1,16 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { getPlaylistsFromChannel } from '../../../../utils/getDataFromYoutube'
 
 type Data = {
-  name: string
+  playlists: []
 }
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: 'John Doe' })
+  const playlists=await getPlaylistsFromChannel();
+
+  res.status(200).json(playlists);
 }
