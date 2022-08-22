@@ -12,5 +12,5 @@ export default async function handler(
 ) {
   const playlists=await getPlaylistsFromChannel();
 
-  res.status(200).json(playlists);
+  res.status(200).json({playlists:[]});
 }
