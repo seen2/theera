@@ -9,12 +9,14 @@ export const getPlaylistsFromChannel = async function () {
 };
 
 export const getVideoesFromPlaylist = async (id: string) => {
+  // console.log("----------------->",id);
+
   const API_KEY = process.env.API_KEY;
   const result = await fetch(
-    `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=25&playlistId=${id}&key=${API_KEY}`
+    `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=100&playlistId=${id}&key=${API_KEY}`
   );
-  const { items } =await result.json();
-  return [...items];
+  const data =await result.json();
+  return [...data.items];
 };
 export const getVideoDetails = async (id: string) => {
   const API_KEY = process.env.API_KEY;

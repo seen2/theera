@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { getPlaylistsFromChannel } from '../../../../utils/getDataFromYoutube'
 
 type Data = {
-  playlists: []
+  playlists: any[]
 }
 
 export default async function handler(
@@ -12,5 +12,5 @@ export default async function handler(
 ) {
   const playlists=await getPlaylistsFromChannel();
 
-  res.status(200).json({playlists:[]});
+  res.status(200).json({playlists:[...playlists]});
 }
