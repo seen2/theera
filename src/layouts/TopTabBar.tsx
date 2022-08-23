@@ -10,7 +10,7 @@ export default function TopTabBar() {
       </li>
       <li className="nav-item">
         <a className="nav-link" href="#">
-          GLobal
+          Global
         </a>
       </li>
       <li className="nav-item">

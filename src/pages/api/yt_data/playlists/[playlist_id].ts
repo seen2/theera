@@ -3,14 +3,21 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { getVideoesFromPlaylist } from "../../../../utils/getDataFromYoutube";
 
 type Data = {
-  videoes: any[];
+  videoes?: any[];
+  msg?: string;
 };
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const { playlist_id } = req.query;
-  const videoes = await getVideoesFromPlaylist(playlist_id as unknown as string);
-  res.status(200).json({ videoes:[...videoes] });
+  try {
+    const { playlist_id } = req.query;
+    const videoes = await getVideoesFromPlaylist(
+      playlist_id as unknown as string
+    );
+    res.status(200).json({ videoes: [...videoes] });
+  } catch (error) {
+    res.status(400).json({ msg: "Something Went Wrong" });
+  }
 }

@@ -8,12 +8,11 @@ export const getPlaylistsFromChannel = async function () {
     const { items } = await result.json();
     return [...items];
   } catch (error) {
-    return [];
+    throw new Error("Unable to feth");
   }
 };
 
 export const getVideoesFromPlaylist = async (id: string) => {
-
   try {
     const API_KEY = process.env.API_KEY;
     const result = await fetch(
@@ -22,7 +21,7 @@ export const getVideoesFromPlaylist = async (id: string) => {
     const data = await result.json();
     return [...data.items];
   } catch (error) {
-    return [];
+    throw new Error("Unable to feth");
   }
 };
 
@@ -35,7 +34,7 @@ export const getVideoDetails = async (id: string) => {
     const { items } = await result.json();
     return [...items];
   } catch (error) {
-    return [];
+    throw new Error("Unable to feth");
   }
 };
 
@@ -49,6 +48,6 @@ export const getRecentVideoes = async () => {
     const { items } = await result.json();
     return [...items];
   } catch (error) {
-    return [];
+    throw new Error("Unable to feth");
   }
 };
