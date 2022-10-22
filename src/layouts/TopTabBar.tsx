@@ -33,7 +33,7 @@ export default function TopTabBar(props: { children: JSX.Element }) {
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link disabled">Meme</a>
+          <a className="nav-link disabled">Meme(coming soon)</a>
         </li>
       </ul>
       {props.children}

@@ -13,8 +13,8 @@ export default function InfoCard() {
             height="315"
             src="https://www.youtube.com/embed/phnOkaZN_CQ?modestbranding=1"
             title="YouTube video player"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            auto-hide={1}
             allowFullScreen
           ></iframe>
         </div>
