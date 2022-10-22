@@ -7,17 +7,12 @@ export default function InfoCard() {
   return (
     <div className="card m-3" style={{ maxWidth: "75rem" }}>
       <div className="card-body">
-        <div className="ratio ratio-16x9">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/phnOkaZN_CQ?modestbranding=1"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            auto-hide={1}
-            allowFullScreen
-          ></iframe>
-        </div>
+      <Image
+          src={"http://i3.ytimg.com/vi/phnOkaZN_CQ/hqdefault.jpg"}
+          alt={"Title"}
+          height={"300"}
+          width={"500"}
+          />
 
         <h5 className="card-title">Card title</h5>
         
