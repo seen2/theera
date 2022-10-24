@@ -3,7 +3,7 @@ import TopTabBar from '../layouts/TopTabBar'
 
 export default function Business() {
   return (
-    <div>
+    <div className="mx-3" >
       <TopTabBar>
         <div>Business</div>
       </TopTabBar>

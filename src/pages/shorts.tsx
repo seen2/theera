@@ -3,7 +3,7 @@ import TopTabBar from '../layouts/TopTabBar';
 
 export default function Shorts() {
   return (
-    <div>
+    <div className="mx-3" >
       <TopTabBar>
         <div>Shorts</div>
       </TopTabBar>

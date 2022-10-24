@@ -3,9 +3,12 @@ import TopTabBar from '../layouts/TopTabBar'
 
 export default function Dots() {
   return (
-    <TopTabBar>
+    
+    <div className="mx-3" >
+      <TopTabBar  >
       <div>Dots</div>
     </TopTabBar>
+    </div>
 
   )
 }

@@ -3,7 +3,7 @@ import TopTabBar from '../layouts/TopTabBar'
 
 export default function GlobalNews() {
   return (
-    <div>
+    <div className="mx-3" >
       <TopTabBar>
       <div>GlobalNews</div>
       </TopTabBar>
